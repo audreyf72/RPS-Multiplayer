@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Multiplayer Rock • Paper • Scissors Game</title>
-    <script src='https://code.jquery.com/jquery.js'></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    <script src='https://code.jquery.com/jquery.js'></script>
 </head>
 
 <body>
@@ -21,7 +22,76 @@
 		#group1message, #group2message- display the choice that each user chose right after the click
 		#win1, #lose1, #win2, #lose2 - chow each player score at the bottom of htier own div
 		#player1, #player2 - munipulate the color of the border at different players turn -->
+<header></header>
 
+<h1>ROCK PAPER SCISSORS</h1>
+<h3>Multiplayer Game</h3>
+
+    <div id="greetings"></div>
+    <div id="playerTurn"></div>
+
+    <div id="winner"></div>
+
+<div class="container">
+
+    <div id="player1">
+
+        <div id="player1name"></div>
+        
+        <div id="waiting1"></div>
+        
+        <div id="group1message"></div>
+
+        <div id="player1choices">
+            <button class="choice1" id="rock1" value="rock"></button>
+            <button class="choice1" id="paper1" value="paper"></button>
+            <button class="choice1" id="scissors1" value="scissors"></button>
+        </div>
+
+        <div id="score1">
+            <span id="win1"></span>
+            <span id="lose1"></span>
+        </div>
+
+    </div>    
+
+    <div id="player2">
+
+        <div id="player2name"></div>
+        
+        <div id="waiting2"></div>
+        
+        <div id="group2message"></div>
+
+        <div id="player2choices">
+            <button class="choice2" id="rock2" value="rock"></button>
+            <button class="choice2" id="paper2" value="paper"></button>
+            <button class="choice2" id="scissors2" value="scissors"></button>    
+        </div>
+
+        <div id="score2">
+            <span id="win2"></span>
+            <span id="lose2"></span>
+        </div>
+
+    </div>
+</div>
+
+<div class="chatContainer">
+    <div class="row">
+    <div id="chat-window"></div>
+    </div>
+
+    <div class="row">
+        <form>
+            <input type="text" id="chat-input" placeholder="Type your message here">
+            <br><br>
+            <input type="submit" id="submit-chat" value="Send"/>
+         </form>
+    </div>
+</div>
+
+<footer></footer>
 
 
 

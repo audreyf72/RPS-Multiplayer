@@ -119,23 +119,12 @@ $(document).ready(function(){
 	}//checkWinners
 
 	
-	/*DOM IDs Munipulation
-		#greetings - receive input of player's name or show greeting message to player after enter
-		#playerTurn - inform each player of each other turn
-		#player1name, #player2name - displayer each player name at the top of their own div
-		#waiting1, #waiting2 - in case there is no player, it will show "waiting for player 1 or 2"
-		#player1choices, #player2choices - will show choices to each player in their on div
-		#group1message, #group2message- display the choice that each user chose right after the click
-		#win1, #lose1, #win2, #lose2 - chow each player score at the bottom of htier own div
-		#player1, #player2 - munipulate the color of the border at different players turn*/
-
-
 	//DOM on initial Load
 	$("#greetings").html("<h2>Enter Your Name to Play</h2>"
-						+"</br><input type='text' id='name-input'>" +
-						"</br></br><input type='submit' id='submit-name'>");
-	$("#waiting1").html("Waiting for player 1");
-	$("#waiting2").html("Waiting for player 2");
+						+"<input type='text' id='nameInput'>" +
+						"<input type='submit' id='submitName'>");
+	$("#waiting1").html("Waiting for player 1...");
+	$("#waiting2").html("Waiting for player 2...");
 	
 	//Hide these when both players dont exist
 	function hidden() {
@@ -155,7 +144,7 @@ $(document).ready(function(){
 				if ((snapshot.child("players").child(1).exists()) && (PlayerName == snapshot.child("players").child(1).val().name)){					
 						//update the message to the database
 						database.ref("/chat").onDisconnect().update({							
-							message: ((snapshot.child("players").child(1).val().name) + " has been DISCONNECTED!!"),
+							message: ((snapshot.child("players").child(1).val().name) + " has been disconnected."),
 							dateAdded: firebase.database.ServerValue.TIMESTAMP												
 						});
 						//delete the player 1 database
@@ -164,7 +153,7 @@ $(document).ready(function(){
 				}else if ((snapshot.child("players").child(2).exists()) && (PlayerName == snapshot.child("players").child(2).val().name)){	
 						//update the message to the database	
 						database.ref("/chat").onDisconnect().update({						
-							message: ((snapshot.child("players").child(2).val().name) + " has been DISCONNECTED!!"),
+							message: ((snapshot.child("players").child(2).val().name) + " has been disconnected."),
 							dateAdded: firebase.database.ServerValue.TIMESTAMP													
 						});//database	
 						//delete the player 1 database
@@ -177,7 +166,7 @@ $(document).ready(function(){
 		
 		//if player 1 dont exists, empty all that related to player 1 and unhilighted both user div
 		if(((snapshot.child("players").child(1).exists()) == false)){
-				$("#waiting1").html("Waiting for player 1");
+				$("#waiting1").html("Waiting for player 1...");
 				$("#winner").empty();
 				$("#win1").empty();
 				$("#lose1").empty();
@@ -189,7 +178,7 @@ $(document).ready(function(){
 		};
 		//if player 2 dont exists, empty all that related to player 2 and unhilighted both user div
 		if(((snapshot.child("players").child(2).exists()) == false)){
-				$("#waiting2").html("Waiting for player 2");
+				$("#waiting2").html("Waiting for player 2...");
 				$("#winner").empty();
 				$("#win2").empty();
 				$("#lose2").empty();
@@ -223,6 +212,8 @@ $(document).ready(function(){
 					}
 		//If both players exists == we are READY to play!
 		}else if((snapshot.child("players").child(1).exists()) && ((snapshot.child("players").child(2).exists()))){
+
+
 				//Keeping track of turn for the database
 				var databaseTurn = snapshot.child("turn").val();
 				user_1_Name = snapshot.child("players").child(1).val().name;
@@ -232,10 +223,12 @@ $(document).ready(function(){
 					$("#waiting1").empty();
 					$("#player2name").html(snapshot.child("players").child(2).val().name);
 					$("#player1name").html(snapshot.child("players").child(1).val().name);
-					$("#win2").html("WIN: " + snapshot.child("players").child(2).val().win);
-					$("#lose2").html("LOSE: " + snapshot.child("players").child(2).val().lose);
-					$("#win1").html("WIN: " + snapshot.child("players").child(1).val().win);
-					$("#lose1").html("LOSE: " + snapshot.child("players").child(1).val().lose);
+					$("#win2").html("WINS: " + snapshot.child("players").child(2).val().win);
+					$("#lose2").html("LOSSES: " + snapshot.child("players").child(2).val().lose);
+					$("#win1").html("WINS: " + snapshot.child("players").child(1).val().win);
+					$("#lose1").html("LOSSES: " + snapshot.child("players").child(1).val().lose);
+
+
 					//when any player disconnect from the game
 					playerDisconnect();
 					
@@ -246,9 +239,9 @@ $(document).ready(function(){
 						$("#player2").attr("style", "border: 5px solid white");
 						hidden();
 						$("#player1choices").attr("style", "visibility:visible");
-							$("#rock1").html("ROCK");
-							$("#paper1").html("PAPER");
-							$("#scissors1").html("SCISSORS");
+							$("#rock1").html("<img src = 'assets/images/rock.png' width = '150px'>");
+							$("#paper1").html("<img src = 'assets/images/paper.png' width = '150px'>");
+							$("#scissors1").html("<img src = 'assets/images/scissors.png' width = '150px'>");
 						$("#winner").empty();
 						$("#playerTurn").html("It's your turn!");
 				}
@@ -258,7 +251,7 @@ $(document).ready(function(){
 						$("#player2").attr("style", "border: 5px solid yellow");
 						hidden();
 						$("#group1message").attr("style", "visibility:visible");
-							$("#group1message").html("Chose: " + "<h2>" + user_1_Choice + "</h2>");
+							$("#group1message").html("Chose: " + "<div class='rpsChoice'>" + user_1_Choice + "</div>");
 						$("#playerTurn").html("Waiting for " + user_2_Name + " to choose...");
 				}
 				
@@ -267,7 +260,7 @@ $(document).ready(function(){
 						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(2).val().name +  ".  You are player 2!</h2>");
 						$("#player1").attr("style", "border: 5px solid yellow");
 						$("#player2").attr("style", "border: 5px solid white");
-						$("#playerTurn").html("Wating for " + user_1_Name + " to choose!!");
+						$("#playerTurn").html("Waiting for " + user_1_Name + " to choose!!");
 						hidden();	
 						$("#winner").empty();
 				}
@@ -278,9 +271,9 @@ $(document).ready(function(){
 						$("#playerTurn").html("It is your turn!"); 
 						hidden();							
 						$("#player2choices").attr("style", "visibility:visible");
-							$("#rock2").html("ROCK");
-							$("#paper2").html("PAPER");
-							$("#scissors2").html("SCISSORS");				
+							$("#rock2").html("<img src = 'assets/images/rock.png' width = '150px'>");
+							$("#paper2").html("<img src = 'assets/images/paper.png' width = '150px'>");
+							$("#scissors2").html("<img src = 'assets/images/scissors.png' width = '150px'>");				
 				}
 				//both player's browser at turn 3 (after player 2 made a choice) and the increase score function hasn't been called
 				if(databaseTurn == 3 && IsGameResetting == false){
@@ -299,20 +292,20 @@ $(document).ready(function(){
 							$("#player1choices").attr("style", "visibility:hidden");
 							$("#group2message").attr("style", "visibility:visible");
 							$("#group1message").attr("style", "visibility:visible");		
-						 		$("#group1message").html("Chose: " + "<h2>" + user_1_Choice + "</h2>");
-						 		$("#group2message").html("Chose: " + "<h2>" + user_2_Choice + "</h2>");
+						 		$("#group1message").html("Chose: " + "<div class='rpsChoice'>" + user_1_Choice + "</div>");
+						 		$("#group2message").html("Chose: " + "<div class='rpsChoice'>" + user_2_Choice + "</div>");
 							$("#playerTurn").empty();	
 						//call the function to check for winnner
 						CheckWinners.playerSocre();
-						// Display this page for 5 seconds and call clearDelay function to reset the game
-						delayTimer = setTimeout(CheckWinners.clearDelay, 5 * 1000);				
+						// Display this page for 3 seconds and call clearDelay function to reset the game
+						delayTimer = setTimeout(CheckWinners.clearDelay, 3 * 1000);				
 				}	
 		}// else if
 	}); //database
 	//as each user enters the game
-	$("#submit-name").on("click", function(){
+	$("#submitName").on("click", function(){
 		//graping the value of the user's name 
-		var username = $("#name-input").val().trim();
+		var username = $("#nameInput").val().trim();
 		//set the screen name to user's name
 		PlayerName = username;
 		console.log(username);

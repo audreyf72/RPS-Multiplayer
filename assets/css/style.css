@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Boogaloo', 'cursive';
+}
+
+body {
+    font-size: 16pt;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#greetings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(106, 156, 199);
+    padding: 25px;
+}
+
+input[type=text] {
+    font-size: 14pt;
+}
+
+input[type=submit] {
+    width: 120px;
+    padding: 15px;
+    background-color: brown;
+    color: white;
+    font-size: 12pt;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(92, 28, 28);
+}
+
+#nameInput {
+    padding: 10px;
+    width: 500px;
+    margin: 20px 0px 20px 0px;
+}
+
+#submitName {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+    margin-bottom: 2px;
+    font-size: 36pt;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(106, 156, 199);
+    margin-top: 1px;
+    font-size: 18pt;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 28pt;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+button {
+    display: inline;
+    max-width: 150px;
+    background-color: transparent;
+    border: 0;
+}
+
+.rpsChoice {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: brown;
+    font-size: 42pt;
+    text-transform: capitalize;
+}
+
+#playerTurn {
+    text-align: center;
+    font-size: 30pt;
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+    color: brown;
+    text-transform: capitalize;
+}
+
+#winner {
+    text-align: center;
+    font-size: 30pt;
+    font-weight: bold;
+    margin: 5px 0px 10px 0px;
+    color: brown;
+    text-transform: capitalize;
+}
+
+#player1 {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    background-color: aliceblue;
+    min-height: 350px;
+    height: auto;
+    padding: 25px;
+    text-transform: capitalize;
+}
+
+#player1name {
+    position: absolute;
+    top: 10px;
+    font-size: 30pt;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: rgb(106, 156, 199);
+}
+
+#group1message {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#player1choices {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#score1 {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+#player2 {
+    position: relative;
+    width: 50%;
+    text-align: center;
+    background-color: aliceblue;
+    min-height: 350px;
+    padding: 25px;
+    text-transform: capitalize;
+}
+
+#player2name {
+    position: absolute;
+    top: 10px;
+    font-size: 30pt;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: rgb(106, 156, 199);
+}
+
+#group2message {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#player2choices {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#score2 {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(106, 156, 199);
+    padding: 25px;
+    text-transform: capitalize;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+}
+
+#chat-input {
+    width: 500px;
+    height: 35px;
+    border: 0;
+    padding: 0px 10px 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#chat-window {
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-bottom: 20px;
+}
