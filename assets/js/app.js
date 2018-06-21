@@ -243,7 +243,7 @@ $(document).ready(function(){
 							$("#paper1").html("<img src = 'assets/images/paper.png' width = '150px'>");
 							$("#scissors1").html("<img src = 'assets/images/scissors.png' width = '150px'>");
 						$("#winner").empty();
-						$("#playerTurn").html("It's your turn!");
+						$("#playerTurn").html("It's your turn.");
 				}
 				//player 1's browser at player 2's turn
 				if((PlayerName == snapshot.child("players").child(1).val().name) && (databaseTurn == 2)){//after player 1 picks
@@ -260,7 +260,7 @@ $(document).ready(function(){
 						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(2).val().name +  ".  You are player 2!</h2>");
 						$("#player1").attr("style", "border: 5px solid yellow");
 						$("#player2").attr("style", "border: 5px solid white");
-						$("#playerTurn").html("Waiting for " + user_1_Name + " to choose!!");
+						$("#playerTurn").html("Waiting for " + user_1_Name + " to choose...");
 						hidden();	
 						$("#winner").empty();
 				}
@@ -268,7 +268,7 @@ $(document).ready(function(){
 				if((PlayerName == snapshot.child("players").child(2).val().name) && (databaseTurn == 2 )){
 						$("#player1").attr("style", "border: 5px solid white");
 						$("#player2").attr("style", "border: 2px solid yellow");
-						$("#playerTurn").html("It is your turn!"); 
+						$("#playerTurn").html("It's your turn."); 
 						hidden();							
 						$("#player2choices").attr("style", "visibility:visible");
 							$("#rock2").html("<img src = 'assets/images/rock.png' width = '150px'>");
@@ -331,7 +331,7 @@ $(document).ready(function(){
 						});
 					//if both player exists
 					}else if ((snapshot.child("players").child(1).exists()) && (snapshot.child("players").child(2).exists())){
-					alert("There are two players playing! Try again later!");
+					alert("There are already two players playing. Please try again later!");
 					}//else if
 			}); //database
 	}); //on click
