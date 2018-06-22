@@ -70,7 +70,8 @@ input[type=submit]:hover {
 #nameInput {
     padding: 10px;
     width: 500px;
-    margin: 10px 0px 10px 0px;
+    margin: 5px 0px 10px 0px;
+    background-color: #f7f7f6;
 }
 
 #submitName {
@@ -133,7 +134,7 @@ button {
     padding: 5px;
     text-transform: capitalize;
     overflow: auto;
-    margin-right: 3px;
+    margin-right: 4px;
     margin-bottom: 3px;
 }
 
@@ -241,7 +242,7 @@ button {
 }
 
 #chat-input {
-    width: 500px;
+    width: 650px;
     height: 50px;
     border: 0;
     padding: 0px 10px 0px 10px;
@@ -252,7 +253,7 @@ button {
 }
 
 #chat-window {
-    width: 500px;
+    width: 650px;
     height: 300px;
     margin-top: 10px;
     margin-left: auto;
@@ -290,6 +291,7 @@ footer {
 
     #nameInput {
         width: 95%;
+        max-width: 450px;
     }
 
     #chat-input {
