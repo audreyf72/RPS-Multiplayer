@@ -235,20 +235,20 @@ $(document).ready(function(){
 				//player 1's browser at player 1's turn
 				if((PlayerName == snapshot.child("players").child(1).val().name) && (databaseTurn == 1)){
 						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(1).val().name +  "!  You are player 1.</h2>");
-						$("#player1").attr("style", "border: 5px solid yellow");
+						$("#player1").attr("style", "border: 5px solid #858581");
 						$("#player2").attr("style", "border: 5px solid white");
 						hidden();
 						$("#player1choices").attr("style", "visibility:visible");
-							$("#rock1").html("<img src = 'assets/images/rock.png' width = '150px'>");
-							$("#paper1").html("<img src = 'assets/images/paper.png' width = '150px'>");
-							$("#scissors1").html("<img src = 'assets/images/scissors.png' width = '150px'>");
+							$("#rock1").html("<img class='responsive' src = 'assets/images/rock.png'>");
+							$("#paper1").html("<img class='responsive' src = 'assets/images/paper.png'>");
+							$("#scissors1").html("<img class='responsive' src = 'assets/images/scissors.png'>");
 						$("#winner").empty();
 						$("#playerTurn").html("It's your turn.");
 				}
 				//player 1's browser at player 2's turn
 				if((PlayerName == snapshot.child("players").child(1).val().name) && (databaseTurn == 2)){//after player 1 picks
 						$("#player1").attr("style", "border: 5px solid white");
-						$("#player2").attr("style", "border: 5px solid yellow");
+						$("#player2").attr("style", "border: 5px solid #858581");
 						hidden();
 						$("#group1message").attr("style", "visibility:visible");
 							$("#group1message").html("Chose: " + "<div class='rpsChoice'>" + user_1_Choice + "</div>");
@@ -258,7 +258,7 @@ $(document).ready(function(){
 				//player2's browser  at player 1's turn
 				if((PlayerName == snapshot.child("players").child(2).val().name) && (databaseTurn == 1 )){
 						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(2).val().name +  "!  You are player 2.</h2>");
-						$("#player1").attr("style", "border: 5px solid yellow");
+						$("#player1").attr("style", "border: 5px solid #858581");
 						$("#player2").attr("style", "border: 5px solid white");
 						$("#playerTurn").html("Waiting for " + user_1_Name + " to choose...");
 						hidden();	
@@ -267,13 +267,13 @@ $(document).ready(function(){
 				//player2's browser  at player 2's turn
 				if((PlayerName == snapshot.child("players").child(2).val().name) && (databaseTurn == 2 )){
 						$("#player1").attr("style", "border: 5px solid white");
-						$("#player2").attr("style", "border: 2px solid yellow");
+						$("#player2").attr("style", "border: 2px solid #858581");
 						$("#playerTurn").html("It's your turn."); 
 						hidden();							
 						$("#player2choices").attr("style", "visibility:visible");
-							$("#rock2").html("<img src = 'assets/images/rock.png' width = '150px'>");
-							$("#paper2").html("<img src = 'assets/images/paper.png' width = '150px'>");
-							$("#scissors2").html("<img src = 'assets/images/scissors.png' width = '150px'>");				
+							$("#rock2").html("<img class='responsive' src = 'assets/images/rock.png'>");
+							$("#paper2").html("<img class='responsive' src = 'assets/images/paper.png'>");
+							$("#scissors2").html("<img class='responsive' src = 'assets/images/scissors.png'>");				
 				}
 				//both player's browser at turn 3 (after player 2 made a choice) and the increase score function hasn't been called
 				if(databaseTurn == 3 && IsGameResetting == false){

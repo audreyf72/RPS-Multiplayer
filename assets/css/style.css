@@ -9,10 +9,26 @@ body {
     margin: 0;
 }
 
+.responsive {
+    max-width: 150px;
+    width: 100%;
+}
+
 header {
     width: 100%;
-    margin: 0;
-    height: 150px;
+    height: auto;
+    background-image: url("../images/rps_banner-02.png");
+    background-size: contain;
+    background-color: white;
+    background-repeat: repeat-x;
+    text-align: center;
+}
+
+.banner {
+    max-width: 1020px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
@@ -28,7 +44,7 @@ header {
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: rgb(106, 156, 199);
+    background-color: white;
     padding: 25px;
 }
 
@@ -39,14 +55,15 @@ input[type=text] {
 input[type=submit] {
     width: 120px;
     padding: 15px;
-    background-color: brown;
+    background-color: #858581;
     color: white;
     font-size: 12pt;
     text-transform: uppercase;
 }
 
 input[type=submit]:hover {
-    background-color: rgb(92, 28, 28);
+    background-color: black;
+    color: white;
 }
 
 #nameInput {
@@ -61,22 +78,22 @@ input[type=submit]:hover {
 
 h1 {
     text-align: center;
-    color: brown;
+    color: #858581;
     margin-bottom: 2px;
     font-size: 36pt;
 }
 
 h3 {
     text-align: center;
-    color: rgb(106, 156, 199);
+    color: #858581;
     margin-top: 1px;
     font-size: 18pt;
 }
 
 h2 {
     text-align: center;
-    color: white;
-    font-size: 28pt;
+    color: black;
+    font-size: 30pt;
     margin: 0;
     text-transform: capitalize;
 }
@@ -90,21 +107,22 @@ button {
 
 .rpsChoice {
     position: absolute;
+    width: 100%;
     top: 75px;
     left: 0;
     right: 0;
     margin: auto;
-    color: brown;
-    font-size: 42pt;
-    text-transform: capitalize;
+    color: #858581;
+    font-size: 45pt;
+    text-transform: uppercase;
 }
 
 #playerTurn {
     text-align: center;
-    font-size: 30pt;
+    font-size: 28pt;
     font-weight: bold;
     margin: 10px 0px 10px 0px;
-    color: brown;
+    color: #652121;
     text-transform: capitalize;
 }
 
@@ -113,7 +131,7 @@ button {
     font-size: 30pt;
     font-weight: bold;
     margin: 5px 0px 10px 0px;
-    color: brown;
+    color: #7b1e1e;
     text-transform: capitalize;
 }
 
@@ -121,7 +139,7 @@ button {
     position: relative;
     width: 50%;
     text-align: center;
-    background-color: aliceblue;
+    background-color: #eeeeea;
     min-height: 350px;
     height: auto;
     padding: 25px;
@@ -132,16 +150,16 @@ button {
 #player1name {
     position: absolute;
     top: 10px;
-    font-size: 30pt;
+    font-size: 36pt;
     left: 0;
     right: 0;
     margin: auto;
-    color: rgb(106, 156, 199);
+    color: #652121;
 }
 
 #group1message {
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 0;
     right: 0;
     margin: auto;
@@ -149,7 +167,6 @@ button {
 }
 
 #player1choices {
-    display: block;
     position: absolute;
     top: 90px;
     left: 0;
@@ -159,8 +176,8 @@ button {
 }
 
 #score1 {
-    display: block;
     position: absolute;
+    font-size: 22pt;
     bottom: 20px;
     left: 0;
     right: 0;
@@ -172,7 +189,7 @@ button {
     position: relative;
     width: 50%;
     text-align: center;
-    background-color: aliceblue;
+    background-color: #eeeeea;
     min-height: 350px;
     padding: 25px;
     text-transform: capitalize;
@@ -182,16 +199,16 @@ button {
 #player2name {
     position: absolute;
     top: 10px;
-    font-size: 30pt;
+    font-size: 36pt;
     left: 0;
     right: 0;
     margin: auto;
-    color: rgb(106, 156, 199);
+    color: #652121;
 }
 
 #group2message {
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 0;
     right: 0;
     margin: auto;
@@ -209,6 +226,7 @@ button {
 
 #score2 {
     position: absolute;
+    font-size: 22pt;
     bottom: 20px;
     left: 0;
     right: 0;
@@ -221,7 +239,7 @@ button {
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: rgb(106, 156, 199);
+    background-color: #c7c0ae;
     padding: 25px;
     text-transform: capitalize;
 }
@@ -252,7 +270,17 @@ button {
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 720px) {
+footer {
+    width: 100%;
+    background-color: #858581;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+}
+
+@media only screen and (max-width: 1000px) {
 
     .container {
         display: block;
