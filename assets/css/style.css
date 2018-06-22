@@ -21,6 +21,7 @@ header {
     background-size: contain;
     background-color: white;
     background-repeat: repeat-x;
+    background-position-y: -5px;
     text-align: center;
 }
 
@@ -133,6 +134,7 @@ button {
     text-transform: capitalize;
     overflow: auto;
     margin-right: 3px;
+    margin-bottom: 3px;
 }
 
 #player1name {
@@ -182,6 +184,7 @@ button {
     padding: 5px;
     text-transform: capitalize;
     overflow: auto;
+    margin-bottom: 3px;
 }
 
 #player2name {
@@ -228,7 +231,7 @@ button {
     align-items: center;
     justify-content: center;
     background-color: #c7c0ae;
-    padding: 25px;
+    padding: 10px;
     text-transform: capitalize;
 }
 
@@ -255,10 +258,11 @@ button {
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 footer {
+    margin-top: 3px;
     width: 100%;
     background-color: #858581;
     color: white;
@@ -278,7 +282,6 @@ footer {
     #player1 {
         width: 100%;
         margin-right: 0px;
-        margin-bottom: 3px;
     }
 
     #player2 {
