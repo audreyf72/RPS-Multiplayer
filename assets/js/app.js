@@ -206,7 +206,7 @@ $(document).ready(function(){
 				playerDisconnect();
 					//at the player1's  browser
 					if(PlayerName == snapshot.child("players").child(1).val().name){
-							$("#greetings").html("<h2>Hello " + snapshot.child("players").child(1).val().name +  ".  You are player 1!</h2>");					
+							$("#greetings").html("<h2>Hello " + snapshot.child("players").child(1).val().name +  "!  You are player 1.</h2>");					
 							$("#win1").html("WIN: " + player_1_win);
 							$("#lose1").html("LOSE: " + player_1_lose);
 					}
@@ -234,7 +234,7 @@ $(document).ready(function(){
 					
 				//player 1's browser at player 1's turn
 				if((PlayerName == snapshot.child("players").child(1).val().name) && (databaseTurn == 1)){
-						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(1).val().name +  ".  You are player 1!</h2>");
+						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(1).val().name +  "!  You are player 1.</h2>");
 						$("#player1").attr("style", "border: 5px solid yellow");
 						$("#player2").attr("style", "border: 5px solid white");
 						hidden();
@@ -257,7 +257,7 @@ $(document).ready(function(){
 				
 				//player2's browser  at player 1's turn
 				if((PlayerName == snapshot.child("players").child(2).val().name) && (databaseTurn == 1 )){
-						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(2).val().name +  ".  You are player 2!</h2>");
+						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(2).val().name +  "!  You are player 2.</h2>");
 						$("#player1").attr("style", "border: 5px solid yellow");
 						$("#player2").attr("style", "border: 5px solid white");
 						$("#playerTurn").html("Waiting for " + user_1_Name + " to choose...");
@@ -288,8 +288,8 @@ $(document).ready(function(){
 							
 							$("#player1").attr("style", "border: 5px solid white");
 							$("#player2").attr("style", "border: 5px solid white");
-							$("#player2choices").attr("style", "visibility:hidden");
-							$("#player1choices").attr("style", "visibility:hidden");
+							$("#player2choices").attr("style", "display:none");
+							$("#player1choices").attr("style", "display:none");
 							$("#group2message").attr("style", "visibility:visible");
 							$("#group1message").attr("style", "visibility:visible");		
 						 		$("#group1message").html("Chose: " + "<div class='rpsChoice'>" + user_1_Choice + "</div>");
@@ -302,6 +302,15 @@ $(document).ready(function(){
 				}	
 		}// else if
 	}); //database
+
+//Allow name input submission with enter key
+var input = document.getElementById("nameInput");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submitName").click();
+    }
+});
 	//as each user enters the game
 	$("#submitName").on("click", function(){
 		//graping the value of the user's name 

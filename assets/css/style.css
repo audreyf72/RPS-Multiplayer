@@ -52,7 +52,7 @@ input[type=submit]:hover {
 #nameInput {
     padding: 10px;
     width: 500px;
-    margin: 20px 0px 20px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
 #submitName {
@@ -126,6 +126,7 @@ button {
     height: auto;
     padding: 25px;
     text-transform: capitalize;
+    overflow: auto;
 }
 
 #player1name {
@@ -144,17 +145,21 @@ button {
     left: 0;
     right: 0;
     margin: auto;
+    text-transform: lowercase;
 }
 
 #player1choices {
+    display: block;
     position: absolute;
-    top: 85px;
+    top: 90px;
     left: 0;
     right: 0;
     margin: auto;
+    overflow: auto;
 }
 
 #score1 {
+    display: block;
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -171,6 +176,7 @@ button {
     min-height: 350px;
     padding: 25px;
     text-transform: capitalize;
+    overflow: auto;
 }
 
 #player2name {
@@ -189,14 +195,16 @@ button {
     left: 0;
     right: 0;
     margin: auto;
+    text-transform: lowercase;
 }
 
 #player2choices {
     position: absolute;
-    top: 85px;
+    top: 90px;
     left: 0;
     right: 0;
     margin: auto;
+    overflow: auto;
 }
 
 #score2 {
@@ -225,9 +233,10 @@ button {
 
 #chat-input {
     width: 500px;
-    height: 35px;
+    height: 50px;
     border: 0;
     padding: 0px 10px 0px 10px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
 
@@ -236,9 +245,37 @@ button {
 #chat-window {
     width: 500px;
     height: 300px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 720px) {
+
+    .container {
+        display: block;
+    }
+
+    #player1 {
+        width: 100%;
+    }
+
+    #player2 {
+        width: 100%;
+    }
+
+    #nameInput {
+        width: 95%;
+    }
+
+    #chat-input {
+        width: 95%;
+    }
+
+    #chat-window {
+        width: 95%;
+    }
+
 }
