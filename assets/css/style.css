@@ -45,7 +45,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 25px;
+    padding: 10px;
 }
 
 input[type=text] {
@@ -76,20 +76,6 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-h1 {
-    text-align: center;
-    color: #858581;
-    margin-bottom: 2px;
-    font-size: 36pt;
-}
-
-h3 {
-    text-align: center;
-    color: #858581;
-    margin-top: 1px;
-    font-size: 18pt;
-}
-
 h2 {
     text-align: center;
     color: black;
@@ -115,6 +101,7 @@ button {
     color: #858581;
     font-size: 45pt;
     text-transform: uppercase;
+    overflow: auto;
 }
 
 #playerTurn {
@@ -142,9 +129,10 @@ button {
     background-color: #eeeeea;
     min-height: 350px;
     height: auto;
-    padding: 25px;
+    padding: 5px;
     text-transform: capitalize;
     overflow: auto;
+    margin-right: 3px;
 }
 
 #player1name {
@@ -168,7 +156,7 @@ button {
 
 #player1choices {
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 0;
     right: 0;
     margin: auto;
@@ -191,7 +179,7 @@ button {
     text-align: center;
     background-color: #eeeeea;
     min-height: 350px;
-    padding: 25px;
+    padding: 5px;
     text-transform: capitalize;
     overflow: auto;
 }
@@ -217,7 +205,7 @@ button {
 
 #player2choices {
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 0;
     right: 0;
     margin: auto;
@@ -278,6 +266,7 @@ footer {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12pt;
+    font-weight: 100;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -288,6 +277,8 @@ footer {
 
     #player1 {
         width: 100%;
+        margin-right: 0px;
+        margin-bottom: 3px;
     }
 
     #player2 {

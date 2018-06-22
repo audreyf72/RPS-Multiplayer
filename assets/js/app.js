@@ -172,8 +172,8 @@ $(document).ready(function(){
 				$("#lose1").empty();
 				$("#player1name").empty();
 				$("#playerTurn").empty();
-				$("#player1").attr("style", "border: 5px solid white");
-				$("#player2").attr("style", "border: 5px solid white");
+				$("#player1").attr("style", "border: 5px solid #eeeeea");
+				$("#player2").attr("style", "border: 5px solid #eeeeea");
 
 		};
 		//if player 2 dont exists, empty all that related to player 2 and unhilighted both user div
@@ -184,15 +184,15 @@ $(document).ready(function(){
 				$("#lose2").empty();
 				$("#player2name").empty();
 				$("#playerTurn").empty();
-				$("#player1").attr("style", "border: 5px solid white");
-				$("#player2").attr("style", "border: 5px solid white");
+				$("#player1").attr("style", "border: 5px solid #eeeeea");
+				$("#player2").attr("style", "border: 5px solid #eeeeea");
 		};
 		//if player 2 exists but not 1,, show player 2 name in his div and unhilighted both user div
 		if((snapshot.child("players").child(2).exists()) && ((snapshot.child("players").child(1).exists()) === false)){
 				$("#player2name").html(snapshot.child("players").child(2).val().name);
 				$("#waiting2").empty();
-				$("#player1").attr("style", "border: 5px solid white");
-				$("#player2").attr("style", "border: 5px solid white");
+				$("#player1").attr("style", "border: 5px solid #eeeeea");
+				$("#player2").attr("style", "border: 5px solid #eeeeea");
 				hidden();
 				//when any player disconnect from the game
 				playerDisconnect();
@@ -236,7 +236,7 @@ $(document).ready(function(){
 				if((PlayerName == snapshot.child("players").child(1).val().name) && (databaseTurn == 1)){
 						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(1).val().name +  "!  You are player 1.</h2>");
 						$("#player1").attr("style", "border: 5px solid #858581");
-						$("#player2").attr("style", "border: 5px solid white");
+						$("#player2").attr("style", "border: 5px solid #eeeeea");
 						hidden();
 						$("#player1choices").attr("style", "visibility:visible");
 							$("#rock1").html("<img class='responsive' src = 'assets/images/rock.png'>");
@@ -247,7 +247,7 @@ $(document).ready(function(){
 				}
 				//player 1's browser at player 2's turn
 				if((PlayerName == snapshot.child("players").child(1).val().name) && (databaseTurn == 2)){//after player 1 picks
-						$("#player1").attr("style", "border: 5px solid white");
+						$("#player1").attr("style", "border: 5px solid #eeeeea");
 						$("#player2").attr("style", "border: 5px solid #858581");
 						hidden();
 						$("#group1message").attr("style", "visibility:visible");
@@ -259,14 +259,14 @@ $(document).ready(function(){
 				if((PlayerName == snapshot.child("players").child(2).val().name) && (databaseTurn == 1 )){
 						$("#greetings").html("<h2>Hello " + snapshot.child("players").child(2).val().name +  "!  You are player 2.</h2>");
 						$("#player1").attr("style", "border: 5px solid #858581");
-						$("#player2").attr("style", "border: 5px solid white");
+						$("#player2").attr("style", "border: 5px solid #eeeeea");
 						$("#playerTurn").html("Waiting for " + user_1_Name + " to choose...");
 						hidden();	
 						$("#winner").empty();
 				}
 				//player2's browser  at player 2's turn
 				if((PlayerName == snapshot.child("players").child(2).val().name) && (databaseTurn == 2 )){
-						$("#player1").attr("style", "border: 5px solid white");
+						$("#player1").attr("style", "border: 5px solid #eeeeea");
 						$("#player2").attr("style", "border: 2px solid #858581");
 						$("#playerTurn").html("It's your turn."); 
 						hidden();							
@@ -286,8 +286,8 @@ $(document).ready(function(){
 						player_2_win = snapshot.child("players").child(2).val().win;
 						player_2_lose = snapshot.child("players").child(2).val().lose;
 							
-							$("#player1").attr("style", "border: 5px solid white");
-							$("#player2").attr("style", "border: 5px solid white");
+							$("#player1").attr("style", "border: 5px solid #eeeeea");
+							$("#player2").attr("style", "border: 5px solid #eeeeea");
 							$("#player2choices").attr("style", "display:none");
 							$("#player1choices").attr("style", "display:none");
 							$("#group2message").attr("style", "visibility:visible");
