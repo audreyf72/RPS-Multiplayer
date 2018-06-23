@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Boogaloo', 'cursive';
+    font-family: 'Fjalla One', sans-serif;
 }
 
 body {
@@ -46,7 +46,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 input[type=text] {
@@ -81,7 +81,8 @@ input[type=submit]:hover {
 h2 {
     text-align: center;
     color: black;
-    font-size: 30pt;
+    font-size: 26pt;
+    font-family: 'Archivo Black', sans-serif;
     margin: 0;
     text-transform: capitalize;
 }
@@ -91,6 +92,7 @@ button {
     max-width: 150px;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
 }
 
 .rpsChoice {
@@ -101,6 +103,7 @@ button {
     right: 0;
     margin: auto;
     color: #858581;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 45pt;
     text-transform: uppercase;
     overflow: auto;
@@ -117,6 +120,7 @@ button {
 
 #winner {
     text-align: center;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 30pt;
     font-weight: bold;
     margin: 5px 0px 10px 0px;
@@ -138,9 +142,19 @@ button {
     margin-bottom: 3px;
 }
 
+#waiting1 {
+    position: absolute;
+    top: 35px;
+    font-size: 24pt;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 #player1name {
     position: absolute;
     top: 10px;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 36pt;
     left: 0;
     right: 0;
@@ -188,9 +202,19 @@ button {
     margin-bottom: 3px;
 }
 
+#waiting2 {
+    position: absolute;
+    font-size: 24pt;
+    top: 35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 #player2name {
     position: absolute;
     top: 10px;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 36pt;
     left: 0;
     right: 0;
@@ -225,6 +249,10 @@ button {
     margin: auto;
 }
 
+span{
+    padding: 0px 20px 0px 20px;
+}
+
 .chatContainer {
     display: flex;
     flex-direction: column;
@@ -255,6 +283,7 @@ button {
 #chat-window {
     width: 650px;
     height: 300px;
+    color: #858581;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
