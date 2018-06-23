@@ -239,9 +239,9 @@ $(document).ready(function(){
 						$("#player2").attr("style", "border: 5px solid white");
 						hidden();
 						$("#player1choices").attr("style", "visibility:visible");
-							$("#rock1").html("<img src = 'assets/images/rock.png' width = '150px'>");
-							$("#paper1").html("<img src = 'assets/images/paper.png' width = '150px'>");
-							$("#scissors1").html("<img src = 'assets/images/scissors.png' width = '150px'>");
+							$("#rock1").html("<img class='responsive' src = 'assets/images/rock.png'>");
+							$("#paper1").html("<img class='responsive' src = 'assets/images/paper.png'>");
+							$("#scissors1").html("<img class='responsive' src = 'assets/images/scissors.png'>");
 						$("#winner").empty();
 						$("#playerTurn").html("It's your turn.");
 				}

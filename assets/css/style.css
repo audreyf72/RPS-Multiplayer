@@ -15,8 +15,14 @@ header {
     height: 150px;
 }
 
+.responsive {
+    width: 100%;
+    max-width: 150px;
+}
+
 .container {
     display: flex;
+    flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -88,17 +94,6 @@ button {
     border: 0;
 }
 
-.rpsChoice {
-    position: absolute;
-    top: 75px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    color: brown;
-    font-size: 42pt;
-    text-transform: capitalize;
-}
-
 #playerTurn {
     text-align: center;
     font-size: 30pt;
@@ -119,19 +114,22 @@ button {
 
 #player1 {
     position: relative;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    width: 50%;
     background-color: aliceblue;
     min-height: 350px;
     height: auto;
-    padding: 25px;
     text-transform: capitalize;
 }
 
 #player1name {
+    font-size: 30pt;
     position: absolute;
     top: 10px;
-    font-size: 30pt;
     left: 0;
     right: 0;
     margin: auto;
@@ -148,7 +146,7 @@ button {
 
 #player1choices {
     position: absolute;
-    top: 85px;
+    top: 75px;
     left: 0;
     right: 0;
     margin: auto;
@@ -156,11 +154,16 @@ button {
 
 #score1 {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 0;
     right: 0;
     margin: auto;
+}
 
+.rpsChoice {
+    color: brown;
+    font-size: 42pt;
+    text-transform: capitalize;
 }
 
 #player2 {
