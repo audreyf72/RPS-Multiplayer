@@ -98,7 +98,7 @@ button {
 .rpsChoice {
     position: absolute;
     width: 100%;
-    top: 75px;
+    top: 65px;
     left: 0;
     right: 0;
     margin: auto;
@@ -115,7 +115,6 @@ button {
     font-weight: bold;
     margin: 10px 0px 10px 0px;
     color: #652121;
-    text-transform: capitalize;
 }
 
 #winner {
@@ -133,7 +132,7 @@ button {
     width: 50%;
     text-align: center;
     background-color: #eeeeea;
-    min-height: 350px;
+    min-height: 310px;
     height: auto;
     padding: 5px;
     text-transform: capitalize;
@@ -173,7 +172,7 @@ button {
 
 #player1choices {
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     right: 0;
     margin: auto;
@@ -183,11 +182,10 @@ button {
 #score1 {
     position: absolute;
     font-size: 22pt;
-    bottom: 20px;
+    bottom: 10px;
     left: 0;
     right: 0;
     margin: auto;
-
 }
 
 #player2 {
@@ -195,7 +193,7 @@ button {
     width: 50%;
     text-align: center;
     background-color: #eeeeea;
-    min-height: 350px;
+    min-height: 310px;
     padding: 5px;
     text-transform: capitalize;
     overflow: auto;
@@ -233,7 +231,7 @@ button {
 
 #player2choices {
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     right: 0;
     margin: auto;
@@ -243,7 +241,7 @@ button {
 #score2 {
     position: absolute;
     font-size: 22pt;
-    bottom: 20px;
+    bottom: 10px;
     left: 0;
     right: 0;
     margin: auto;
@@ -261,7 +259,6 @@ span{
     justify-content: center;
     background-color: #c7c0ae;
     padding: 10px;
-    text-transform: capitalize;
 }
 
 .row {
