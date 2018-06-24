@@ -26,18 +26,20 @@ Players will be able to chat while playing. Perfect for catching up when the gam
 * Google Fonts
 * moment.js
 
-## Screenshots
+# Screenshots
+
+##Welcome Screen
 
 ![Alt text](/assets/images/screenshot.png?raw=true "Rock Paper Scissors Game")
 
-##
+##Player 1's Turn
 
 ![Alt text](/assets/images/screenshot2.png?raw=true "Hand Selectors")
 
-##
+##Player Wins Screen
 
 ![Alt text](/assets/images/screenshot3.png?raw=true "Player Scores")
 
-##
+##Chat Window
 
 ![Alt text](/assets/images/screenshot4.png?raw=true "Chat")

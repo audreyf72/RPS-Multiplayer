@@ -41,7 +41,7 @@ $(document).ready(function () {
 				turn: turns
 			});
 		},
-		//clear the 5 seconds timeout and call the reset
+		//clear the 3 seconds timeout and call the reset
 		clearDelay: function () {
 			clearTimeout(delayTimer);
 			CheckWinners.resetGame();
