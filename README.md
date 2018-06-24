@@ -2,7 +2,7 @@
 
 Unit 7 Homework Challenge as part of the UCI Coding Boot Camp. RPS Multiplayer is an online multiplayer Rock, Paper, Scissors game using Firebase Databases. 
 
-[Link to play RPS Multiplayer](https://github.com/audreyf72/RPS-Multiplayer)
+[Link to play RPS Multiplayer](https://audreyf72.github.io/RPS-Multiplayer/index.html)
 
 ## How to Play
 
