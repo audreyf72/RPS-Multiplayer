@@ -28,12 +28,16 @@ Players will be able to chat while playing. Perfect for catching up when the gam
 
 ## Screenshots
 
-![Alt text](/assets/images/screenshot.png?raw=true "Rock Paper Scissors")
+![Alt text](/assets/images/screenshot.png?raw=true "Rock Paper Scissors Game")
 
 ##
 
-![Alt text](/assets/images/screenshot2.png?raw=true "Rock Paper Scissors")
+![Alt text](/assets/images/screenshot2.png?raw=true "Hand Selectors")
 
 ##
 
-![Alt text](/assets/images/screenshot3.png?raw=true "Rock Paper Scissors")
+![Alt text](/assets/images/screenshot3.png?raw=true "Player Scores")
+
+##
+
+![Alt text](/assets/images/screenshot4.png?raw=true "Chat")
