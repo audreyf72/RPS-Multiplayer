@@ -1,6 +1,6 @@
 # RPS-Multiplayer
 
-Multiplayer Rock Paper Scissors game using Firebase Databases. Unit 7 Homework Challenge as part of UCI Coding Boot Camp.
+Unit 7 Homework Challenge as part of the UCI Coding Boot Camp. RPS Multiplayer is an online multiplayer Rock, Paper, Scissors game using Firebase Databases. 
 
 ## How to Play
 
