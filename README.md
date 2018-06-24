@@ -2,6 +2,8 @@
 
 Unit 7 Homework Challenge as part of the UCI Coding Boot Camp. RPS Multiplayer is an online multiplayer Rock, Paper, Scissors game using Firebase Databases. 
 
+[Link to play RPS Multiplayer](https://github.com/audreyf72/RPS-Multiplayer)
+
 ## How to Play
 
 Two players are required to play. Players will need to play on separate devices or separate browser windows. Each player starts the game by entering thier name. Player one begins the game by choosing a hand representing rock, paper or scissors. After player one chooses, it is player two's turn to choose.
