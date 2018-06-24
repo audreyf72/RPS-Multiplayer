@@ -28,8 +28,6 @@ Players will be able to chat while playing. Perfect for catching up when the gam
 
 ## Screenshots
 
-##
-
 ![Alt text](/assets/images/screenshot.png?raw=true "Rock Paper Scissors")
 
 ##
